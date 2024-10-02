@@ -1,0 +1,45 @@
+let rows=+prompt("Enter NoOf rows:");
+let gap=1;
+for(i=rows;i>=1;i--){
+    res="";
+    ascii=65;
+    for(j=1;j<=i;j++){
+        res=res+String.fromCharCode(ascii);
+        ascii++;
+    }
+    if(i<rows){
+        res=res+" ".repeat(gap);
+        gap=gap+2;
+    }
+    if(i==rows){
+        let temp=res;
+        res=res.split("");
+        res.pop();
+        let rev=res.reverse().join("");
+        console.log(temp+rev);
+        
+    }
+    else{
+    let rev=res.trim().split("").reverse().join("");
+    res=res+rev;
+    console.log(res);
+    }
+}
+// Enter NoOf rows:7
+
+rows=5;
+alpha=65; 
+for(i=1;i<=rows;i++){
+    res="";
+    for(k=1;k<=rows-i;k++){
+        res=res+"  "
+    }
+    temp=alpha+i-1;
+    for(j=1;j<=i;j++){
+        res=res+String.fromCharCode(temp)+" "
+        temp--
+    }
+    alpha=alpha+i
+    
+    console.log(res)
+}
