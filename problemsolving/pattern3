@@ -1,0 +1,10 @@
+rows=4;
+for(i=1;i<=rows;i++){
+    num =1 
+    res=""
+    for(j=1;j<=i;j++){
+        res=num+" "+res
+        num++
+    }
+    console.log(res)
+}

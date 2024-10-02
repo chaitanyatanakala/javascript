@@ -51,7 +51,7 @@ a=+prompt("enter the number: ")
 prime(a)
 
 
-Checking wheter primesum is bigger or non-primesum is bigger:-
+// Checking wheter primesum is bigger or non-primesum is bigger:-
 
 
 number=prompt("Enter the num: ")
