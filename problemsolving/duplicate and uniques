@@ -1,0 +1,63 @@
+arr=prompt("Enter the number: ").split("").map(Number)
+emp =[], unq=0;dup=0
+for(i of arr){
+    if(!emp.includes(i)){
+        emp.push(i)
+    }
+}
+console.log(emp)
+for(i of emp){
+    c=0;
+    for(j of arr){
+        if(i==j){
+            c++
+        }
+        }
+        if(c==1){
+            unq=unq+i+" "
+            // console.log(i)
+        }
+        else{
+            dup=dup+i+" "
+        }
+}
+
+if(unq.length==2){
+    console.log("The Unique number is: ",unq)
+    
+}else{
+    console.log("The unique numbers are: ",unq)
+}
+if(dup.length==2){
+    console.log("The Duplicate number is: ",dup)
+    
+}else{
+    console.log("The Duplicate numbers are: ",dup)
+} 
+
+
+
+
+arr=prompt("Enter the number: ").split("").map(Number)
+emp =[], unq=0;dup=0
+for(i of arr){
+    if(!emp.includes(i)){
+        emp.push(i)
+    }
+}
+console.log(emp)
+for(i of emp){
+    c=0;
+    for(j of arr){
+        if(i==j){
+            c++;
+        }
+        }
+        if(c==1){
+            console.log(i + "->" + c)
+            // unq=unq+i+" "
+        }
+        else{
+            // dup=dup+i+" "
+            console.log(i + "->" + c)
+        }
