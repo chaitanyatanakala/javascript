@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form{
+        border: 2px solid black;
+        height: 50vh;
+        width: 50vh;
+        padding: 10%;
+        background-color: whitesmoke;
+        /* text-align: center; */
+     }
+     #input1,#input2,#input3,#input4{ 
+      width: 50%;
+      border: 3px solid ;
+     }
+     #reg, #user{
+      width: 20%;
+      text-align: start;
+     }
+    </style>
+  </head>
+  <body>
+    <form id="form1">
+      <label for="input1" id="reg">Register No:- </label>
+      <input type="text" id="input1" />
+      <span id="sp" style="display:none">Please enter the valid register number</span>
+      <br /><br />
+      <label id="user">Username:-</label>
+      <input type="text" id="input2" />
+      <span id="sp1" style="display:none">You can use only alphabets</span>
+      <br /><br />
+      <label>Mobile Number:- </label>
+      <input type="tel" id="input3">
+      <span id="sp2" style="display: none;">Please enter valid mobile number</span>
+      <br><br>
+      <label>Password:- </label>
+      <input type="password" id="input4">
+      <span id="sp3" style="display: none;">Please create strong password</span>
+      <br><br>
+      <input type="submit"/>
+    </form>
+    <script>
+      let form1 = document.getElementById("form1");
+      let input1 = document.getElementById("input1");
+      let input2 = document.getElementById("input2");
+      let input3 = document.getElementById("input3");
+      let input4 = document.getElementById("input4");
+      form1.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let pattern=/23g21[0-9]/
+        let method=pattern.test(input1.value)
+        if (!method) {
+          input1.style.border = "3px solid red";
+          sp.style.marginTop="15px"
+          sp.style.display="block"
+        }
+        let Username=/[a-z]/
+        let method1=Username.test(input2.value)
+        if(!method1){
+            input2.style.border = "3px solid red";
+            sp1.style.marginTop="15px"
+            sp1.style.display="block"
+        }
+        let mobile=/^[0-9]{10,10}$/
+        let method2=mobile.test(input3.value)
+        if(!method2){
+            input3.style.border = "3px solid red";
+            sp2.style.marginTop="15px"
+            sp2.style.display="block"
+        }
+        let password=/(?=.*[A-z])(?=.*[0-9])(?=.*[a-z]){8}(?=.*[@$!%*?&])/
+        let method3=password.test(input4.value)
+        if(!method3){
+            input4.style.border="3px solid red"
+            sp3.style.display="block"
+        }
+      });
+    </script>
+  </body>
+</html>
