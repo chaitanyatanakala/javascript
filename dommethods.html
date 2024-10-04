@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h1 id="h1"></h1> -->
+    <button id="btn">button</button>
+    <h1 id="h1"></h1>
+    <h2 id="h2"></h2>
+    <script>
+      // let h1=document.createElement("h1")
+      let h1 = document.getElementById("h1");
+      let btn = document.getElementById("btn");
+
+      btn.addEventListener("mousedown", () => {
+        var names = [
+          "Raina",
+          "Dhoni",
+          "Kohli",
+          "Rohit",
+          "Bumrah",
+          "Pant",
+          "dhoni",
+        ];
+        var randomIndex = Math.floor(Math.random() * names.length);
+        var randomElement = names[randomIndex];
+        h1.innerHTML = randomElement;
+      });
+
+      let h2 = document.getElementById("h2");
+      btn.addEventListener("mouseover", () => {
+        h2.innerText = Math.ceil(Math.random() * 100000);
+      });
+
+      btn.addEventListener("mouseleave", () => {
+        randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        document.body.style.backgroundColor = "#" + randomColor;
+      });
+    </script>
+  </body>
+</html>
