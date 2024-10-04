@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <marquee>
+        <!-- <img src="./images.jpeg"> -->
+   </marquee>
+    <!-- <button id="btn" style="border: 2px solid;">Clickme</button> -->
+   
+    <img>
+    <script>
+        let myDiv2 = document.createElement("div");
+        myDiv2.style.border = "3px solid black";
+        myDiv2.style.height = "400px";
+        myDiv2.style.width = "250px";
+        myDiv2.style.backgroundImage="url(./id.jpeg)"
+        myDiv2.style.backgroundSize="cover"
+        myDiv2.style.backgroundPosition="center"
+  
+        document.body.appendChild(myDiv2);
+  
+        let name = document.createElement("h1");
+        name.innerHTML = "10000Coders";
+        // name.style.color = "";
+        // name.style.margin="50%"
+        name.style.textAlign = "center";
+        myDiv2.appendChild(name);
+  
+        let x = document.getElementsByTagName("img");
+        x[0].setAttribute("src", "./pandya.jpg");
+        x[0].setAttribute("height", "100");
+        x[0].setAttribute("width", "100");
+        x[0].style.marginLeft = "25%";
+        myDiv2.appendChild(x[0]);
+  
+        let title = document.createElement("h3");
+        title.innerHTML = "Name: Hardik Pandya";
+        title.style.textAlign = "Center";
+        myDiv2.appendChild(title);
+  
+        let clg = document.createElement("h3");
+        clg.innerHTML = "Clg: Sir creddy college";
+        clg.style.marginTop="-10px"
+        clg.style.textAlign = "Center";
+        myDiv2.appendChild(clg);
+     
+    let myDiv = document.createElement("div");
+    myDiv.style.height="100%"
+    myDiv.style.width="100%"
+    // myDiv.style.border="2px solid red"
+    document.body.appendChild(myDiv)
+
+    let mar=document.createElement("marquee");
+    myDiv.appendChild(mar)
+
+    let myDiv1 = document.createElement("img");
+    myDiv1.setAttribute("src","./images.jpeg");
+    myDiv1.style.display="flex";
+    myDiv1.style.justifyContent="center";
+    myDiv1.style.alignItems="center";
+    myDiv1.style.marginLeft="15%"
+    let wish = document.createElement("h1");
+    wish.innerHTML="Happy Vinayaka Chavithi"
+    mar.appendChild(wish)
+    mar.appendChild(myDiv1)
+</script>
+</body>
+</html>
